@@ -14,7 +14,6 @@ class Core(object):
     ipurl=0
     mode=1024
     menu1=False
-    f=None
     network_speed=0.05
     menu2=False
     def GetData(self, url):
@@ -25,6 +24,7 @@ class Core(object):
             print ("Invalid URL or IP")
             exit(0)
         Core.ipurl=self.ipurl
+        print(Core.ipurl)
         print (60*"-")
         print (22*" ",bcolors.FAIL,"Port Scanner By Mihir & Hiten",bcolors.ENDC)
         print (60*"-")
@@ -34,6 +34,7 @@ class Core(object):
             if choice == "1":
                 Core.mode=1024
                 menu=True
+                print(bcolors.OKBLUE,"\n\n\nSimple Scan Selected\n",bcolors.ENDC)
                 break
             elif choice == "2":
                 Core.mode=64000
@@ -44,7 +45,7 @@ class Core(object):
 
 
     def Start_Scan(self, port_start, port_end):
-        #Core.f = open(Core.ipurl, "a")
+
         try:
             for x in range(port_start,port_end):
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -53,25 +54,22 @@ class Core(object):
                     tmp=x,"OPEN", socket.getservbyport(x)
                     tmp1=str(tmp[0])+"\t"+str(tmp[1])+"\t"+str(tmp[2])
                     print(bcolors.OKGREEN,"\t",tmp1,bcolors.ENDC)
-                    #Core.f.write(str(tmp)+"\n")
-            #Core.f.close()
         except Exception as e:
             print (e)
 try:
-    print("\n\n\t\tWelcome To Port Scanner")
+    print("\n\n\t\tWelcome To Port Scanner!!\n\n")
     scan = Core()
-    scan.GetData(input("Enter IP Address or URL\n"))
-    print("\n\n")
+    scan.GetData(input("Enter IP Address or URL :"))
+    print("\n")
     print("Scan Details :\n")
-    print(bcolors.WARNING,"Range: 1 -",Core.mode,"Ports","\n Target:",Core.ipurl,bcolors.ENDC)
+    print(bcolors.BOLD,"Range: 1 -",Core.mode,"Ports","\n Target:",Core.ipurl,bcolors.ENDC)
     print("\n\n")
-    print(bcolors.BOLD,"Scanning Open Ports on",Core.ipurl,"...\n\n",bcolors.ENDC)
+    print(bcolors.BOLD,"Scanning Open Ports on",Core.ipurl,"\n\n",bcolors.ENDC)
     print("\tPort\tStatus\tService\n")
     for count in range(0,Core.mode):
-        #print (Core.mode)
+
         time.sleep(Core.network_speed)
         _thread.start_new_thread(scan.Start_Scan, (count,count+1))
-        if count > Core.mode:
-            exit(0)
+        
 except Exception as e:
     print (e)
