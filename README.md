@@ -12,5 +12,5 @@ that are active on the given host.
 specified port range given by the user.  
 ● If a user enters an URL we automatically convert it to its
 respective IP address.  
-● There are 2 scanning modes:  Simple and Comprehensive,
-Simple Mode(1024 Ports), Comprehensive Mode(64000 Ports).
+● There are 2 scanning modes:
+  Simple and Comprehensive, Simple Mode(1024 Ports),   Comprehensive Mode(64000 Ports).
