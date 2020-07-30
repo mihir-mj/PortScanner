@@ -1,6 +1,7 @@
 # PortScanner
 Simple Python Utility that scans open ports on a given IP address or URL
-Created with Hiten Bhatia github.com/hiten484
+Created with Hiten Bhatia  
+# github.com/hiten484
 # Problem Statement
 To find out redundant ports on a given host/server in order to mitigate
 an attack and identify network services running on a host.
