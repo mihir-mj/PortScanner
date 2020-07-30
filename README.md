@@ -15,5 +15,5 @@ respective IP address.
 ● There are 2 scanning modes: Simple and Comprehensive, Simple Mode(1024 Ports),Comprehensive Mode(64000 Ports).  
 # Project Website 
 https://mihir-mj.github.io/PortScanner/  
-
+# Screenshot  
 ![alt text](https://github.com/mihir-mj/PortScanner/blob/master/ps-ss.PNG?raw=true)
