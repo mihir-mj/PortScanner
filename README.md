@@ -17,5 +17,5 @@ respective IP address.
 # Project Website 
 https://mihir-mj.github.io/PortScanner/  
 # Screenshot  
-![alt text](https://github.com/mihir-mj/PortScanner/blob/master/ps-ss.PNG)  
+![alt text](https://raw.githubusercontent.com/mihir-mj/PortScanner/master/ps-ss.PNG)  
 
